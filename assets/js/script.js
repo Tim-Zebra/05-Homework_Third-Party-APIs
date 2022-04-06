@@ -6,3 +6,4 @@ $('#currentDay').text(date);
 // Creates time blocks and places them into containers
 var container = $(".container");
 
+// Obtain date from input field upon button submit
