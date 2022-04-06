@@ -11,6 +11,7 @@ Website Visual (Gif/video):
 Link to Deployed Page:
 
 References:
+Bootstrap row obtained from https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp
 
 See 'commits' for development process.
 

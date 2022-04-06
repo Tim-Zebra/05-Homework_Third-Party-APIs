@@ -5,3 +5,4 @@ $('#currentDay').text(date);
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\TIME BLOCKS//////////////////////////////////////
 // Creates time blocks and places them into containers
 var container = $(".container");
+
