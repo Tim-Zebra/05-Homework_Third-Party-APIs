@@ -43,14 +43,28 @@ function loadData () {
     if (storedEventData !== null) {
         eventData = storedEventData;
     }
-    console.log(eventData);
+    applyEvents();
 }
 
 // Applies saved data to events
-// Obtain an array containing all the object keys
-// run loop: loop will
-    // look at keys
-    // apply key value to text value
+function applyEvents () {
+    // create a variable that equals the event id
+    $('div').each(function () {
+        var id = $(this);
+        var idValue = $(this).attr('id');
+
+        // confirms we have an id attribute in our div
+        if(idValue !== undefined) {
+            // Matches if the id is present in the object
+            if (eventData[idValue] !== null) {
+                // grabs the textarea element and applies eventData
+                id.children('textarea').val(eventData[idValue]);
+            }
+        }
+    }
+    );
+}
+
 
 saveButtonEl.on('click', handleFormSubmit);
 
