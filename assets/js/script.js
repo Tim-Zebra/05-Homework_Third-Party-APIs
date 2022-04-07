@@ -6,9 +6,6 @@ $('#currentDay').text(date);
 var eventData = {};
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\TIME BLOCKS//////////////////////////////////////
-// Creates time blocks and places them into containers
-var container = $(".container");
-
 // Upon Button Submit
 var saveButtonEl = $('.saveBtn');
 var eventValue = $('.description');
@@ -65,8 +62,29 @@ function applyEvents () {
     );
 }
 
-
 saveButtonEl.on('click', handleFormSubmit);
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Event Color Change: Based off current time/////////////////////////////////////////////
+// Set interval to update time
+var refresh = setInterval(function () {
+
+}, 1000);
+getTime ();
+// get time in 24-hours using moment JS
+function getTime () {
+    var time = moment().format('H');
+    console.log(time);
+    return time;
+}
+// changes the color
+function assignEventColor () {
+    var time = getTime();
+
+}
+
+// update class values on given variable
+
+// remove old class values
+
 
 
 

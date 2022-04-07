@@ -11,7 +11,7 @@ Website Visual (Gif/video):
 Link to Deployed Page:
 
 References:
-Bootstrap row obtained from https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp
+Button icons inspired by https://fontawesomeicons.com/bootstrap/icons/save
 
 See 'commits' for development process.
 
