@@ -66,7 +66,7 @@ saveButtonEl.on('click', handleFormSubmit);
 // Set interval to update time
 var refresh = setInterval(function () {
 // remove class values
-removeEventColor ()
+removeEventColor ();
 
 // get the time
 getTime ();
@@ -105,6 +105,19 @@ function assignEventColor () {
     });
 }
 
+function removeEventColor () {
+    $('div textarea').each(function () {
+        if($(this).hasClass('past')) {
+            $(this).removeClass('past')
+        }
+        if($(this).hasClass('present')) {
+            $(this).removeClass('present')
+        }
+        if($(this).hasClass('future')) {
+            $(this).removeClass('future')
+        }
+    });
+}
 
 
 
