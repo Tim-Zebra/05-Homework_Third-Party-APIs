@@ -3,13 +3,14 @@ UT Bootcamp - Calendar app using HTML, JSS, and JQuery
 
 Description:
 Simple calendar application with the current date that allows a user to save events locally for each hour of the working day, 
-as well as keep track of past, present, and future events.
+as well as keep track of time by highlighting past, present, and future events.
 
 How to Use:
 Enter your event into the colored box. 
 Press the "save" button to the right of the text box to save your event.
 
-Website Visual (Gif/video):
+Website Visual Demo(Gif/video):
+https://drive.google.com/file/d/12bLTmugF0OFfpOrJranBxed2FMLECPY_/view
 
 Link to Deployed Page:
 https://tim-zebra.github.io/05-Homework_Third-Party-APIs/
