@@ -8,7 +8,6 @@ var eventData = {};
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\TIME BLOCKS//////////////////////////////////////
 // Upon Button Submit
 var saveButtonEl = $('.saveBtn');
-var eventValue = $('.description');
 
 // Obtain date from input
 function handleFormSubmit() {
@@ -66,24 +65,45 @@ saveButtonEl.on('click', handleFormSubmit);
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Event Color Change: Based off current time/////////////////////////////////////////////
 // Set interval to update time
 var refresh = setInterval(function () {
+// remove class values
+removeEventColor ()
+
+// get the time
+getTime ();
+
+
+// assign event color
+assignEventColor ();
 
 }, 1000);
+
 getTime ();
 // get time in 24-hours using moment JS
 function getTime () {
     var time = moment().format('H');
-    console.log(time);
+
     return time;
 }
-// changes the color
+
+// changes the color. Uses style.css classes .past .present .future
+
 function assignEventColor () {
     var time = getTime();
-
+    // assigns all times as past by default
+    $('div').each(function () {
+        var id = $(this);
+        var idValue = $(this).attr('id');
+        if(idValue < time) {
+            id.children('textarea').addClass('past');
+        }
+        if(idValue === time) {
+            id.children('textarea').addClass('present');
+        }
+        if(idValue > time) {
+            id.children('textarea').addClass('future');
+        }
+    });
 }
-
-// update class values on given variable
-
-// remove old class values
 
 
 
