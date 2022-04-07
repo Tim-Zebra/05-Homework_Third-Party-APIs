@@ -12,13 +12,26 @@ var eventValue = $('.description');
 
 // Obtain date from input
 function handleFormSubmit() {
+    // Gets the text value from the submission input
     var text = $(this).siblings('textarea').val();
-    console.log(text);
+
+    // Gets the value of the ID at submission input
+    var timeId = $(this).parent().attr('id');
+
+    saveData(timeId, text);
+
+}
+
+// Save data locally from input
+function saveData (locationId, locationData) {
+    console.log(locationId);
+    console.log(locationData);
 }
 
 saveButtonEl.on('click', handleFormSubmit);
-// Set data as text for input
 
-// Save data from input
+
+
+
 
 // Retrieve saved data
