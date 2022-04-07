@@ -1,6 +1,8 @@
 // Creates date dispalyed at top of page
-var date = moment().format('dddd' + ', ' + 'MMMM Do');
-$('#currentDay').text(date);
+function headerDate () {
+    var date = moment().format('dddd' + ', ' + 'MMMM Do');
+    $('#currentDay').text(date);
+}
 
 // Stores the data from each time event as an object
 var eventData = {};
@@ -30,9 +32,7 @@ function saveData (locationId, locationData) {
     console.log(eventData);
 }
 
-
 // loads local data if present
-loadData();
 function loadData () {
     // Stores new data into the object
     var storedEventData = JSON.parse(localStorage.getItem("events"));
@@ -65,12 +65,14 @@ saveButtonEl.on('click', handleFormSubmit);
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Event Color Change: Based off current time/////////////////////////////////////////////
 // Set interval to update time
 var refresh = setInterval(function () {
+// Refreshes header date
+headerDate();
+
 // remove class values
 removeEventColor ();
 
 // get the time
 getTime ();
-
 
 // assign event color
 assignEventColor ();
@@ -81,12 +83,10 @@ getTime ();
 // get time in 24-hours using moment JS
 function getTime () {
     var time = moment().format('H');
-
     return time;
 }
 
 // changes the color. Uses style.css classes .past .present .future
-
 function assignEventColor () {
     var time = getTime();
     // assigns all times as past by default
@@ -119,8 +119,13 @@ function removeEventColor () {
     });
 }
 
-
-
+// Initializes program
+function init () {
+    headerDate();
+    loadData();
+    assignEventColor();
+}
+init();
 
 
 
