@@ -28,13 +28,29 @@ function handleFormSubmit() {
 
 // Save data locally from input
 function saveData (locationId, locationData) {
-    console.log(locationId);
-    console.log(locationData);
-
+    // Stores new data into the object
     eventData[locationId] = locationData;
-
+    localStorage.setItem("events", JSON.stringify(eventData));
     console.log(eventData);
 }
+
+
+// loads local data if present
+loadData();
+function loadData () {
+    // Stores new data into the object
+    var storedEventData = JSON.parse(localStorage.getItem("events"));
+    if (storedEventData !== null) {
+        eventData = storedEventData;
+    }
+    console.log(eventData);
+}
+
+// Applies saved data to events
+// Obtain an array containing all the object keys
+// run loop: loop will
+    // look at keys
+    // apply key value to text value
 
 saveButtonEl.on('click', handleFormSubmit);
 
@@ -42,4 +58,4 @@ saveButtonEl.on('click', handleFormSubmit);
 
 
 
-// Retrieve saved data
+
