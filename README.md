@@ -14,7 +14,7 @@ If you want to remove your event, simply clear the box and click "save."
 <a href="https://drive.google.com/file/d/12bLTmugF0OFfpOrJranBxed2FMLECPY_/view">Video Demo</a>
 
 ## Link to Deployed Page:
-https://tim-zebra.github.io/05-Homework_Third-Party-APIs/
+https://tim-zebra.github.io/Daily-Planner/
 
 ## References:
 Button icons inspired by https://fontawesomeicons.com/bootstrap/icons/save
