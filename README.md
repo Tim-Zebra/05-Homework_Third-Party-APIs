@@ -10,7 +10,8 @@ Click the "save" button to the right of the text box to save your event. <br />
 If you want to remove your event, simply clear the box and click "save."
 
 ## Website Visual Demo(Gif/video):
-<a href="./demos/Demo_Work-Day-Scheduler.webm">Video Demo</a>
+![Banner](./demos/time-change_GIF.gif) <br />
+<a href="https://drive.google.com/file/d/12bLTmugF0OFfpOrJranBxed2FMLECPY_/view">Video Demo</a>
 
 ## Link to Deployed Page:
 https://tim-zebra.github.io/05-Homework_Third-Party-APIs/
