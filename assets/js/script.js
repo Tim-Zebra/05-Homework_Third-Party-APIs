@@ -83,7 +83,7 @@ getTime ();
 // get time in 24-hours using moment JS
 function getTime () {
     var time = moment().format('H');
-    return time;
+    return parseInt(time - 10);
 }
 
 // changes the color. Uses style.css classes .past .present .future
@@ -92,7 +92,8 @@ function assignEventColor () {
     // assigns all times as past by default
     $('div').each(function () {
         var id = $(this);
-        var idValue = $(this).attr('id');
+        var idValue = parseInt($(this).attr('id'));
+        
         if(idValue < time) {
             id.children('textarea').addClass('past');
         }

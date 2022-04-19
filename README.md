@@ -10,6 +10,7 @@ Click the "save" button to the right of the text box to save your event. <br />
 If you want to remove your event, simply clear the box and click "save."
 
 ## Website Visual Demo(Gif/video):
+![Banner](demos\dailyPlanner.png) <br />
 ![Banner](./demos/time-change_GIF.gif) <br />
 <a href="https://drive.google.com/file/d/12bLTmugF0OFfpOrJranBxed2FMLECPY_/view">Video Demo</a>
 
