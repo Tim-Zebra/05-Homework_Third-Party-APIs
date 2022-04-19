@@ -83,7 +83,7 @@ getTime ();
 // get time in 24-hours using moment JS
 function getTime () {
     var time = moment().format('H');
-    return parseInt(time - 10);
+    return time;
 }
 
 // changes the color. Uses style.css classes .past .present .future
